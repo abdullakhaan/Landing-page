@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artnime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gray-800 shadow-lg z-50">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold">ArtNime</h1>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-4">
+          <a href="#home" class="hover:text-teal-400">Home</a>
+          <a href="#about" class="hover:text-teal-400">About</a>
+          <a href="#projects" class="hover:text-teal-400">Projects</a>
+          <a href="#contact" class="hover:text-teal-400">Contact</a>
+        </nav>
+        <!-- Mobile Hamburger Menu -->
+        <button id="menu-button" class="md:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Drawer -->
+      <div
+        id="mobile-menu"
+        class="hidden bg-gray-800 text-white absolute top-full left-0 w-full shadow-lg"
+      >
+        <nav class="flex flex-col items-center space-y-4 py-4">
+          <a href="#home" class="hover:text-teal-400">Home</a>
+          <a href="#about" class="hover:text-teal-400">About</a>
+          <a href="#projects" class="hover:text-teal-400">Projects</a>
+          <a href="#contact" class="hover:text-teal-400">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="h-screen flex flex-col justify-center items-center bg-cover bg-center bg-black pt-20"
+      style="background-image: url('')"
+    >
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white">Hello</h1>
+      <p class="mt-4 text-lg" id="hero-subtitle">
+        A passionate developer creating amazing digital experiences.
+      </p>
+      <a
+        href="#projects"
+        class="mt-8 px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transform hover:scale-105 transition"
+        >View My Work</a
+      >
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-4xl font-bold mb-8 text-center">About</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <img
+              src="./images/logo.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+          </div>
+          <div class="opacity-0" id="about-text">
+           <h2 class="text-2xl font-bold">
+              Welcome to ArtNime! We specialize in delivering creative and
+              technical solutions that bring ideas to life. With expertise in
+              multiple domains, We offer:</h2>  <p class="text-xxl mb-4"> <hr> <br>  Graphic Design: Crafting visually
+              stunning posters, flyers, logos, and banners that captivate
+              audiences. <hr> <br> Animation: Breathing life into ideas with 2D and 3D
+              character animations. <hr> <br> Video Editing: Producing compelling 2D and
+              3D animated videos that tell impactful stories. <hr> <br> Web Design:
+              Designing and developing seamless front-end and back-end solutions
+              for modern, responsive websites.
+            </p>
+            <h4 class="text-xl "> <hr> <br>
+                We are passionate about blending creativity with innovation to create work that inspires and engages. Let's build something amazing together!
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-4xl font-bold mb-8 text-center">Projects</h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 opacity-0"
+          id="project-grid"
+        >
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+            <img
+              src="./images/1.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+            <p>TITLE</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+            <img
+              src="./images/2.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+            <p>TITLE</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+            <img
+              src="./images/3.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+            <p>TITLE</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Project 4</h3>
+            <img
+              src="./images/4.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+            <p>TITLE</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Project 5</h3>
+            <img
+              src="./images/5.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+            <p>TITLE</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Project 6</h3>
+            <img
+              src="./images/6.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+            <p>TITLE</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Project 7</h3>
+            <img
+              src="./images/7.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+            <p>A short description of the project goes here.</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Project 8</h3>
+            <img
+              src="./images/8.jfif"
+              alt="About me image"
+              class="rounded-lg shadow-lg opacity-0"
+              id="about-image"
+            />
+            <!-- <p>A short description of the project goes here.</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-4xl font-bold mb-8 text-center">Contact Me</h2>
+        <form
+          action="#"
+          class="max-w-lg mx-auto space-y-4 opacity-0"
+          id="contact-form"
+        >
+          <input
+            type="text"
+            placeholder="Name"
+            class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400"
+          />
+          <textarea
+            placeholder="Message"
+            rows="4"
+            class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transform hover:scale-105 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-center">
+      <p class="text-sm">© 2024 ArtNime. All rights reserved.</p>
+    </footer>
+
+    <!-- GSAP and Mobile Menu Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.from("#hero-title", { y: 50, opacity: 0, duration: 1 });
+        gsap.from("#hero-subtitle", {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          delay: 0.3,
+        });
+        gsap.to("#about-image, #about-text", {
+          opacity: 1,
+          y: 0,
+          stagger: 0.3,
+          duration: 1,
+          scrollTrigger: "#about",
+        });
+        gsap.to("#project-grid", {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: "#projects",
+        });
+        gsap.to("#contact-form", {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: "#contact",
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById("menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
+<!-- """
+
+# Save the updated HTML file
+updated_file_path = "/mnt/data/responsive_portfolio_with_mobile_nav.html"
+with open(updated_file_path, "w") as file:
+    file.write(responsive_portfolio_html)
+
+updated_file_path -->
